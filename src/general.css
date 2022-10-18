@@ -1,0 +1,17 @@
+#gtx-trans {
+  z-index: 2147483640 !important;
+}
+
+#hatoke-tranlsate-save {
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  transition: 250ms all ease;
+}
+
+#hatoke-tranlsate-save:hover {
+  background-color: #ddd;
+}
