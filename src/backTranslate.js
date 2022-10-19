@@ -1,7 +1,7 @@
 import elementUtil from "./utilities/element.js";
 import translateUtil from "./utilities/translate.js";
 
-elementUtil.removeElement("#hatoke-translate-wrapper")
+elementUtil.removeElement("#hatoke-translate-wrapper");
 
 const createCloseElement = () => {
   const closeElement = elementUtil.createNewElement({
@@ -94,7 +94,7 @@ const translateModal = elementUtil.createNewElement({
   </style>
   
   <div class="hatoke-translate-wrapper">  
-    <div class="card-wrapper">    
+    <div class="card-wrapper" onmousedown="closeModal(event)">    
       <div class="card-head">
         <span>İngilizce</span>
       </div>
@@ -114,7 +114,16 @@ const translateModal = elementUtil.createNewElement({
   `,
 });
 
-translateModal.appendChild(createCloseElement());
+const translateModalScript = document.createElement("script");
+translateModalScript.text = `
+function closeModal(e){  
+  if (e && (e.which == 2 || e.button == 4)) {
+    const translateModal = document.querySelector("#hatoke-translate-file");
+    translateModal.remove()
+  }  
+}
+`;
+translateModal.appendChild(translateModalScript);
 translateModalWrapper.appendChild(translateModal);
 
 document.body.appendChild(translateModalWrapper);
