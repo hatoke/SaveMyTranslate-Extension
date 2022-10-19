@@ -57,6 +57,7 @@ const translateModal = elementUtil.createNewElement({
   innerHTML: `
   <style>
   .hatoke-translate-wrapper{
+    font-family: Open Sans, sans-serif;
     position: relative;
     display: flex;
     alignt-items: center;
@@ -80,10 +81,6 @@ const translateModal = elementUtil.createNewElement({
     padding: 10px;
     border-bottom: 1px solid #ddd;
     cursor: move;
-  }
-  
-  .card-wrapper .card-head span{
-    font-weight: bold;
   }
   
   .card-wrapper .card-body{
@@ -123,6 +120,7 @@ function closeModal(e){
   }  
 }
 `;
+
 translateModal.appendChild(translateModalScript);
 translateModalWrapper.appendChild(translateModal);
 

@@ -109,7 +109,7 @@ async function showToolTip() {
           line-height: 18px;
         }
 
-        #hatoke-translate-tooltip {
+        #hatoke-translate-tooltip {        
           position: absolute;
           min-width: 140px;
           max-width: 400px;
